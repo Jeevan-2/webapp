@@ -16,7 +16,7 @@ pipeline {
 	 stage('Execute Maven') {
            steps {
              
-                sh 'mvn package'             
+                sh 'mvn clean package'             
           }
         }
         
@@ -24,7 +24,7 @@ pipeline {
   stage('Docker Build and Tag') {
            steps {
               
-                sh 'docker build -t samplewebapp .' 
+                sh 'podman build -t samplewebapp .' 
                 sh 'docker tag samplewebapp kempegowda/project:latest'
                 //sh 'docker tag samplewebapp kempegowda/project:$BUILD_NUMBER'
                
