@@ -1,4 +1,4 @@
-FROM tomcat:9-jdk11
+FROM docker.io/tomcat:9-jdk11
 
 LABEL maintainer="kempegowda"
 
