@@ -1,8 +1,8 @@
-FROM tomcat:latest
+FROM tomcat:9-jdk11
 
 LABEL maintainer="kempegowda"
 
-ADD ./target/WebApp.war /usr/local/tomcat/webapps/
+COPY /var/lib/jenkins/workspace/Docker_cicd/target/WebApp.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
